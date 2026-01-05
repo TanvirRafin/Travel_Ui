@@ -25,7 +25,7 @@ class _homescreenState extends State<homescreen> {
                   IconButton(onPressed: (){}, icon: Icon(Icons.menu, size: 30,)),
                   CircleAvatar(
                     backgroundColor: Colors.orange,
-                    child:IconButton(onPressed: (){}, icon: Icon(Icons.person, size: 30,)) ,
+                    child:IconButton(onPressed: _ontablogin, icon: Icon(Icons.person, size: 30,)) ,
                   )
                 ],
               ),
@@ -180,5 +180,8 @@ class _homescreenState extends State<homescreen> {
         ],
       ),
     );
+  }
+  void _ontablogin(){
+    Navigator.pushReplacementNamed(context, '/login');
   }
 }

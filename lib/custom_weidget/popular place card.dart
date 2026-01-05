@@ -1,5 +1,5 @@
+import 'package:flutter/material.dart';
 
-import 'package:flutter/material.dart' show StatelessWidget, BuildContext, Widget, EdgeInsets, BorderRadius, TextStyle, SizedBox, Icon, Colors, BoxDecoration, CrossAxisAlignment, Radius, Image, BoxFit, ClipRRect, FontWeight, Text, MainAxisAlignment, Icons, Row, Column, Padding, Container;
 
 class PopularPlaceCard extends StatelessWidget {
   final String image;
@@ -29,9 +29,10 @@ class PopularPlaceCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Image
           ClipRRect(
-            borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
+            borderRadius: const BorderRadius.vertical(
+              top: Radius.circular(16),
+            ),
             child: Image.asset(
               image,
               height: 130,
@@ -45,12 +46,18 @@ class PopularPlaceCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(title,
-                    style: const TextStyle(
-                        fontSize: 16, fontWeight: FontWeight.bold)),
+                Text(
+                  title,
+                  style: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
                 const SizedBox(height: 4),
-                Text(location,
-                    style: const TextStyle(color: Colors.grey)),
+                Text(
+                  location,
+                  style: const TextStyle(color: Colors.grey),
+                ),
                 const SizedBox(height: 8),
 
                 Row(
@@ -58,16 +65,21 @@ class PopularPlaceCard extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        const Icon(Icons.star, size: 16, color: Colors.amber),
+                        const Icon(
+                          Icons.star,
+                          size: 16,
+                          color: Colors.amber,
+                        ),
                         const SizedBox(width: 4),
-                        Text(rating.toString()),
+                        Text('$rating'),
                       ],
                     ),
                     Text(
                       price,
                       style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.lightBlue),
+                        fontWeight: FontWeight.bold,
+                        color: Colors.lightBlue,
+                      ),
                     ),
                   ],
                 ),
